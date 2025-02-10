@@ -35,7 +35,7 @@ namespace E_ticaret2.Data
 
 
             // Free Host
-            optionsBuilder.UseSqlServer(@"workstation id=cButikDb.mssql.somee.com;packet size=4096;user id=kayaserdar_SQLLogin_1;pwd=au8oojtwrg;data source=cButikDb.mssql.somee.com;persist security info=False;initial catalog=cButikDb;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"workstation id=Ceylangiyim.mssql.somee.com;packet size=4096;user id=mceylan_SQLLogin_1;pwd=amq19ql891;data source=Ceylangiyim.mssql.somee.com;persist security info=False;initial catalog=Ceylangiyim;TrustServerCertificate=True");
              base.OnConfiguring(optionsBuilder);
 
             // optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
