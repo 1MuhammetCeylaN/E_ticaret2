@@ -30,8 +30,8 @@ namespace E_ticaret2.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Localhost
-            optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=Eticaret2Db;Trusted_Connection=true;TrustServerCertificate=True; ");
-            base.OnConfiguring(optionsBuilder);
+            //optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=Eticaret2Db;Trusted_Connection=true;TrustServerCertificate=True; ");
+            // base.OnConfiguring(optionsBuilder);
 
 
             // Free Host
