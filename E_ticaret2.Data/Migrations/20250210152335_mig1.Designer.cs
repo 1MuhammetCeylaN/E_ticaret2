@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_ticaret2.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250210101435_mig3")]
-    partial class mig3
+    [Migration("20250210152335_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -139,7 +139,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 13, 14, 34, 324, DateTimeKind.Local).AddTicks(647),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 536, DateTimeKind.Local).AddTicks(6454),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -147,7 +147,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("0606da22-2daa-45dc-a459-e861215b4d2b"),
+                            UserGuid = new Guid("25a4c0e0-fcac-4c2e-b940-66fc982c68f6"),
                             UserName = "Admin"
                         });
                 });
@@ -258,7 +258,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 13, 14, 34, 324, DateTimeKind.Local).AddTicks(3408),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 536, DateTimeKind.Local).AddTicks(9989),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -269,7 +269,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 10, 13, 14, 34, 324, DateTimeKind.Local).AddTicks(3416),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 537, DateTimeKind.Local).AddTicks(1),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -371,6 +371,9 @@ namespace E_ticaret2.Data.Migrations
                     b.Property<string>("DeliveryAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OrderCount")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");

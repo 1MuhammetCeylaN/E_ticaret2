@@ -136,7 +136,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 14, 17, 1, 287, DateTimeKind.Local).AddTicks(7221),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 536, DateTimeKind.Local).AddTicks(6454),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -144,7 +144,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("0f4c3375-fd7d-469e-bff7-1966fd69f780"),
+                            UserGuid = new Guid("25a4c0e0-fcac-4c2e-b940-66fc982c68f6"),
                             UserName = "Admin"
                         });
                 });
@@ -255,7 +255,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 14, 17, 1, 288, DateTimeKind.Local).AddTicks(276),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 536, DateTimeKind.Local).AddTicks(9989),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -266,7 +266,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 10, 14, 17, 1, 288, DateTimeKind.Local).AddTicks(290),
+                            CreateDate = new DateTime(2025, 2, 10, 18, 23, 34, 537, DateTimeKind.Local).AddTicks(1),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,
