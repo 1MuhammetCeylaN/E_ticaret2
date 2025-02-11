@@ -6,56 +6,76 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace E_ticaret2.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class mig1 : Migration
+    public partial class mig2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "OrderCount",
+                table: "Orders");
+
+            migrationBuilder.DropColumn(
+                name: "ProductName",
+                table: "Orders");
+
             migrationBuilder.UpdateData(
                 table: "AppUsers",
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "CreateDate", "UserGuid" },
-                values: new object[] { new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(5220), new Guid("05a7e38d-029e-4bb1-a55e-e517e3ef5a49") });
+                values: new object[] { new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(4563), new Guid("15cd74eb-a0d2-4812-8be8-f1f4762ad292") });
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(7971));
+                value: new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(7440));
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "CreateDate",
-                value: new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(7978));
+                value: new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(7448));
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<int>(
+                name: "OrderCount",
+                table: "Orders",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "ProductName",
+                table: "Orders",
+                type: "nvarchar(max)",
+                nullable: true);
+
             migrationBuilder.UpdateData(
                 table: "AppUsers",
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "CreateDate", "UserGuid" },
-                values: new object[] { new DateTime(2025, 2, 10, 20, 30, 51, 524, DateTimeKind.Local).AddTicks(6986), new Guid("471e37a3-841f-47d1-8a9d-5df1ec16e421") });
+                values: new object[] { new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(6678), new Guid("3f7ed078-22a1-4822-b9c0-905491db5885") });
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 2, 10, 20, 30, 51, 524, DateTimeKind.Local).AddTicks(9798));
+                value: new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(9465));
 
             migrationBuilder.UpdateData(
                 table: "Categories",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "CreateDate",
-                value: new DateTime(2025, 2, 10, 20, 30, 51, 524, DateTimeKind.Local).AddTicks(9805));
+                value: new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(9474));
         }
     }
 }

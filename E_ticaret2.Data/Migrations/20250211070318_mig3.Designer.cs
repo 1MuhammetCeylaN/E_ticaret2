@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_ticaret2.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250207194343_myordersupdate")]
-    partial class myordersupdate
+    [Migration("20250211070318_mig3")]
+    partial class mig3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -139,7 +139,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 7, 22, 43, 42, 157, DateTimeKind.Local).AddTicks(2005),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 3, 17, 474, DateTimeKind.Local).AddTicks(5342),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -147,7 +147,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("1616ad0a-3618-4461-aa8d-f116d44d42ac"),
+                            UserGuid = new Guid("5aafa367-4b9b-4ebf-9f7e-d4ee9b6e0c9c"),
                             UserName = "Admin"
                         });
                 });
@@ -196,6 +196,9 @@ namespace E_ticaret2.Data.Migrations
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -255,7 +258,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 7, 22, 43, 42, 157, DateTimeKind.Local).AddTicks(4840),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 3, 17, 474, DateTimeKind.Local).AddTicks(8418),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -266,7 +269,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 7, 22, 43, 42, 157, DateTimeKind.Local).AddTicks(4848),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 3, 17, 474, DateTimeKind.Local).AddTicks(8426),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -369,6 +372,9 @@ namespace E_ticaret2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("OrderCount")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
@@ -379,6 +385,9 @@ namespace E_ticaret2.Data.Migrations
 
                     b.Property<int>("OrderState")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(18,2)");
@@ -398,9 +407,6 @@ namespace E_ticaret2.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
@@ -408,10 +414,8 @@ namespace E_ticaret2.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ProductName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal?>("ProductPrice")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");

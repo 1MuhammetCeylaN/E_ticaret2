@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_ticaret2.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250210173711_mig1")]
-    partial class mig1
+    [Migration("20250211070501_mig4")]
+    partial class mig4
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -139,7 +139,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(5220),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(4294),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -147,7 +147,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("05a7e38d-029e-4bb1-a55e-e517e3ef5a49"),
+                            UserGuid = new Guid("3726d2ac-9bb7-4838-84c0-dad12f0fab9c"),
                             UserName = "Admin"
                         });
                 });
@@ -258,7 +258,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(7971),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7326),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -269,7 +269,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 10, 20, 37, 10, 817, DateTimeKind.Local).AddTicks(7978),
+                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7334),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,

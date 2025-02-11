@@ -4,6 +4,7 @@ using E_ticaret2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_ticaret2.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250211065835_mig2")]
+    partial class mig2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,7 +139,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(4294),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(4563),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -144,7 +147,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("3726d2ac-9bb7-4838-84c0-dad12f0fab9c"),
+                            UserGuid = new Guid("15cd74eb-a0d2-4812-8be8-f1f4762ad292"),
                             UserName = "Admin"
                         });
                 });
@@ -255,7 +258,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7326),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(7440),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -266,7 +269,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7334),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 58, 34, 932, DateTimeKind.Local).AddTicks(7448),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -369,9 +372,6 @@ namespace E_ticaret2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OrderCount")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
@@ -382,9 +382,6 @@ namespace E_ticaret2.Data.Migrations
 
                     b.Property<int>("OrderState")
                         .HasColumnType("int");
-
-                    b.Property<string>("ProductName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(18,2)");

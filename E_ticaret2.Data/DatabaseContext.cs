@@ -30,13 +30,13 @@ namespace E_ticaret2.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Localhost
-             optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=Eticaret2Db;Trusted_Connection=true;TrustServerCertificate=True; ");
-             base.OnConfiguring(optionsBuilder);
+            // optionsBuilder.UseSqlServer(@"Server=LAPTOP-EMJSQFU7\SQLEXPRESS;Database=Eticaret2Db;Trusted_Connection=true;TrustServerCertificate=True; ");
+            // base.OnConfiguring(optionsBuilder);
 
 
             // Free Host
-             optionsBuilder.UseSqlServer(@"workstation id=ceylan20.mssql.somee.com;packet size=4096;user id=ceylanm_SQLLogin_1;pwd=pll59654gg;data source=ceylan20.mssql.somee.com;persist security info=False;initial catalog=ceylan20;TrustServerCertificate=True");
-             base.OnConfiguring(optionsBuilder);
+            // optionsBuilder.UseSqlServer(@"workstation id=ceylan20.mssql.somee.com;packet size=4096;user id=ceylanm_SQLLogin_1;pwd=pll59654gg;data source=ceylan20.mssql.somee.com;persist security info=False;initial catalog=ceylan20;TrustServerCertificate=True");
+            // base.OnConfiguring(optionsBuilder);
 
             // optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 

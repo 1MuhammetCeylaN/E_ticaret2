@@ -4,6 +4,7 @@ using E_ticaret2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_ticaret2.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250211065344_mig1")]
+    partial class mig1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,7 +139,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(4294),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(6678),
                             Email = "admin@gmail.com",
                             IsActive = true,
                             IsAdmin = true,
@@ -144,7 +147,7 @@ namespace E_ticaret2.Data.Migrations
                             Password = "123456*",
                             Phone = "12345",
                             SurName = "adminsurname",
-                            UserGuid = new Guid("3726d2ac-9bb7-4838-84c0-dad12f0fab9c"),
+                            UserGuid = new Guid("3f7ed078-22a1-4822-b9c0-905491db5885"),
                             UserName = "Admin"
                         });
                 });
@@ -255,7 +258,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7326),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(9465),
                             Image = "1.jpg",
                             IsActive = true,
                             IsTopMenu = true,
@@ -266,7 +269,7 @@ namespace E_ticaret2.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 11, 10, 5, 0, 456, DateTimeKind.Local).AddTicks(7334),
+                            CreateDate = new DateTime(2025, 2, 11, 9, 53, 43, 729, DateTimeKind.Local).AddTicks(9474),
                             Image = "2.jpg",
                             IsActive = true,
                             IsTopMenu = true,
